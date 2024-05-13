@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp Message Scheduler</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>WhatsApp Message Scheduler</h1>
+      <form action="/schedule" method="post">
+        <label for="phone_number">Phone Number:</label><br />
+        <input
+          type="text"
+          id="phone_number"
+          name="phone_number"
+          required
+        /><br /><br />
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          required
+        ></textarea
+        ><br /><br />
+        <label for="datetime">Schedule Date and Time:</label><br />
+        <input
+          type="datetime-local"
+          id="datetime"
+          name="datetime"
+          required
+        /><br /><br />
+        <input type="submit" value="Schedule Message" />
+      </form>
+    </div>
+  </body>
+</html>
